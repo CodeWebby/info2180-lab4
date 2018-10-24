@@ -1,7 +1,8 @@
 
 window.onload = function(){
 	var wall =document.querySelectorAll('.boundary');
-	var start = document.getElementById('start')
+	var start = document.getElementById('start');
+	var maze = document.getElementById('maze');
 	var win = true;
 
 	  for (var i = 0; i < wall.length; i++){
@@ -20,6 +21,12 @@ window.onload = function(){
           }
           win = false;
           });
+
+
+	    maze.addEventListener("mouseleave",function(){
+	    	document.getElementById("status").innerHTML = "Cheating is not good!"
+	    	win = false
+	    });
 
 	    /*start.addEventListener("click", function(){
 	    	 for (var i = 0; i < wall.length; i++) {
