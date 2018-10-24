@@ -1,5 +1,6 @@
 window.onload = function(){
 	var wall =document.querySelectorAll('.boundary');
+	var start = document.getElementById('start')
 	var win = true;
 
 	  for (var i = 0; i < wall.length; i++){
@@ -17,4 +18,14 @@ window.onload = function(){
           }
           win = false;
           });
+
+	    start.addEventListener("click", function(){
+	    	 for (var i = 0; i < wall.length; i++) {
+               wall[i].style.background="#eeeee";
+              }
+	    	
+	    });
+	  
+
+	  
 }
