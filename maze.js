@@ -1,3 +1,4 @@
+
 window.onload = function(){
 	var wall =document.querySelectorAll('.boundary');
 	var start = document.getElementById('start')
@@ -7,6 +8,7 @@ window.onload = function(){
 	    wall[i].addEventListener("mouseover", function() {
 	    	this.style.background = "red";
 	    	 win = false;
+	    	 document.getElementById("status").innerHTML = "YOU LOSE!"
 	    	 return win;
 	    });
 	   } 
@@ -14,18 +16,19 @@ window.onload = function(){
 	    end.addEventListener("mouseover", function() {
          if (win == true) {
           document.getElementById("status").innerHTML = "YOU WIN!";
-           alert("CONGRATULATIONS! YOU WIN!");
+           
           }
           win = false;
           });
 
-	    start.addEventListener("click", function(){
+	    /*start.addEventListener("click", function(){
 	    	 for (var i = 0; i < wall.length; i++) {
                wall[i].style.background="#eeeee";
               }
 	    	
-	    });
+	    });*/ 
 	  
 
 	  
+
 }
